@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html>
+<head><link href="stylefordiv.css" rel="stylesheet" type="text/css">
+  <script language = "Javascript">
+    function checkEmail() {
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.email.value)){
+      return true;
+      }
+      return false;
+    }
+    function checkName(str){
+        var re = /[^a-zA-Z]/g
+        if (re.test(str)) return false;
+        return true;
+
+      }
+
+      function checkAddress(str){
+        var re = /[^[a-z][A-Z][0-9]]/g
+        if(re.test(str))return false;
+        return true;
+
+      }
+    function validate(){
+      var emailID=document.form.email;
+        var nn=document.form.name;
+          var add=document.form.address;
+
+      if((nn.value==null)||(nn.value=="")){
+      alert("Please Enter your Name!")
+      nn.focus();
+      return false
+      }
+      if(checkName(nn.value)==false){
+      nn.value=""
+      alert("Invalid Name!");
+      nn.focus()
+      return false
+      }
+      if((emailID.value==null)||(emailID.value=="")){
+      alert("Please Enter your Email ID!")
+      emailID.focus()
+      return false
+      }
+      if (checkEmail(emailID.value)==false){
+      emailID.value=""
+      alert("Invalid Email Adderess!");
+      emailID.focus()
+      return false
+      }
+      if ((add.value==null)||(add.value=="")){
+      alert("Please Enter your Address!")
+      add.focus()
+      return false
+      }
+      if (checkAddress(add.value)==false){
+      add.value=""
+      alert("Invalid Adderess!");
+      add.focus()
+      return false
+      }
+      if(document.form.qualification.selectedIndex==""){
+      alert ( "Please select your qualification!" );
+return false;
+}
+
+      return true
+    }
+    function changex()
+    {
+      var a=document.getElementById('x');
+      a.innerHTML="Please Enter Your Name Here"
+    }
+    function returnx()
+    {
+      var a=document.getElementById('x');
+      a.innerHTML="Name:"
+    }
+    function changey()
+    {
+      var a=document.getElementById('y');
+      a.innerHTML="Please Enter Your Email Here"
+    }
+    function returny()
+    {
+      var a=document.getElementById('y');
+      a.innerHTML="Email:"
+    }
+    function changez()
+    {
+      var a=document.getElementById('z');
+      a.innerHTML="Please Enter Your Address Here"
+    }
+    function returnz()
+    {
+      var a=document.getElementById('z');
+      a.innerHTML="Address:"
+    }
+    function changea()
+    {
+      var a=document.getElementById('a');
+      a.innerHTML="Please Choose Your Qualification Here"
+    }
+    function returna()
+    {
+      var a=document.getElementById('a');
+      a.innerHTML="Qualification:"
+    }
+    function bigImg(x) {
+    x.style.height = "210";
+    x.style.width = "210";
+}
+
+function normalImg(x) {
+    x.style.height = "200";
+    x.style.width = "200";
+}
+function myFunction() {
+    window.open("http://www.w3schools.com");
+  }
+  function search(str){
+
+      switch(str) {
+          case 'varad':
+              alert('Banana is good!');
+          break;
+          case 'Orange':
+              alert('I am not a fan of orange.');
+          break;
+          case 'Apple':
+              alert('How you like them apples?');
+          break;
+          default:
+             alert('I have never heard of that fruit...');
+      }
+    }
+
+  </script>
+  <style>
+input[type=text] {
+    width: 230px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+
+
+
+<h1 style="
+  background:black;
+  border-radius: 500px;
+  display: inline-block;
+  perspective: 250px;
+  transform: rotateY(50deg);
+  position: relative;
+    -webkit-animation: myfirst 5s 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 5s 1;
+    animation-direction: alternate;
+  color:#ffd88e;
+  padding: 15px 15px 0 15px;
+">THE CRONICLE OF CSE DEPARTMENT(PLACEMENTS) </h1>
+<form name="form1">
+<input id="searchname" type="text" name="search" onSubmit="search(this.value)" placeholder="Search A Candidate">
+</form>
+</div>
+<div id="content">
+<div id="nav">
+<ul type="square" style="
+  background: black;
+  border-radius: 252px;
+  color: red;
+  padding: 200px 50px 253px;
+  margin: 2.5%;
+  width:70px;
+  height:54px;
+  float: center;
+">
+<style>
+a.ex2:hover, a.ex2:active {font-size: 150%;}
+</style>
+<li><a class="ex2" href="http://dietms.org/" style="color:yellow;text-decoration:none;" >About Us</a></li><br><br>
+<li><a class="ex2" href="graphs.html" style="color:green;text-decoration:none;">Graphs Of Placements</a></li><br><br>
+<li><a class="ex2" href="companies.html" style="color:orange;text-decoration:none;">Information About Companies</a></li><br>
+
+</ul>
+</div>
+
+<div id="main"><img onclick="window.open('persistent1.html');" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="float:left;padding:1px;position:relative;-webkit-animation: myfirst 1s 1; /* Chrome, Safari, Opera */
+-webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+	animation: myfirst 2s 1;
+animation-direction: alternate;" src="Company Logo\menu_image.jpg" height="200" width="200">
+<img onclick="window.open('capgemini1.html');" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="float:left;padding:1px;position: relative;
+    -webkit-animation: myfirst 2s 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 3s 1;
+    animation-direction: alternate;" src="Company Logo\05947102-photo-capgemini-logo.jpg" height="200" width="200">
+<img onclick="window.open('EGS1.html');" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="float:left;padding:1px;position: relative;
+    -webkit-animation: myfirst 3s 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 4s 1;
+    animation-direction: alternate;" src="Company Logo\15a6005c8625e6443c79723182c444fa.jfif" height="200" width="200">
+<img onclick="window.open('PCTechnology1.html');" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="float:left;padding:1px;position: relative;
+    -webkit-animation: myfirst 4s 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 5s 1;
+    animation-direction: alternate;" src="Company Logo\aaaaaaaaaaaa.jpg" height="200" width="200">
+<img onclick="window.open('WinjitTech1.html');" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="float:left;padding:1px;position: relative;
+    -webkit-animation: myfirst 5s 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 6s 1;
+    animation-direction: alternate;" src="Company Logo\logo.jpg" height="200" width="200">
+<img onclick="window.open('MetroService1.html');" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="float:left;padding:1px;position: relative;
+    -webkit-animation: myfirst 4s 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 5s 1;
+    animation-direction: alternate;" src="Company Logo\metro-logo.jpg" height="200" width="200">
+<img onclick="window.open('Tudip1.html');" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="float:left;padding:1px;position: relative;
+    -webkit-animation: myfirst 5s 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 6s 1;
+    animation-direction: alternate;" src="Company Logo\profile_logo_.jpg" height="200" width="200">
+<img onclick="window.open('QuickHeal1.html');" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="float:left;padding:1px;position: relative;
+    -webkit-animation: myfirst 6s 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 7s 1;
+    animation-direction: alternate;" src="Company Logo\Quick_heal_logo.png" height="200" width="200">
+<img onclick="window.open('ValuD1.html');" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="float:left;padding:1px;position: relative;
+    -webkit-animation: myfirst 7s 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 8s 1;
+    animation-direction: alternate;" src="Company Logo\ValuD-logo.png" height="200" width="200">
+<img onclick="window.open('Xpointers1.html');" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="float:left;padding:1px;position: relative;
+    -webkit-animation: myfirst 9s 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 8s 1;
+    animation-direction: alternate;" src="Company Logo\xPointers_Logo_PSD.png" height="200" width="200">
+<br><P><h1 style="color:rebeccapurple;">CHOOSE ANY ONE COMPANY TO SEE ITS PLACEMENTS</h1></p>
+</div>
+</div>
+<div id="form">
+  <body background="form_picture_nice_textures_ultra_3840x2160_hd-wallpaper-295465.jpg">
+
+  <center>
+
+  <form name="form" method="post" onSubmit="return validate()" style="
+  padding:10px 50px;
+  position: relative;
+    -webkit-animation: myfirst 5s 1; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 5s 1;
+    animation-direction: alternate;
+  border:5px solid gray;
+  border-radius:10px;
+  font-family:raleway;"><p id="change" style="color:white;font-size:250%;font-family:raleway;"> Fill Up This Form To Get Latest Updates! </p>
+  <p id="x" onmouseover="changex()" onmouseout="returnx();" style="color:white;font-size:250%;">Name:</p><input  type="text" name="name" style="width:30%;
+  height:40px;
+  padding:5px;
+  margin-bottom:25px;
+  margin-top:5px;
+  border:2px solid #ccc;
+  color:#4f4f4f;
+  font-size:16px;
+  border-radius:5px
+  "><br><br>
+  <p id="y" onmouseover="changey()" onmouseout="returny();" style="color:white;font-size:250%;">Email:</p><input type="text" name="email" style="width:30%;
+  height:40px;
+  padding:5px;
+  margin-bottom:25px;
+  margin-top:5px;
+  border:2px solid #ccc;
+  color:#4f4f4f;
+  font-size:16px;
+  border-radius:5px
+  "><br><br>
+  <p id="z" onmouseover="changez()" onmouseout="returnz();" style="color:white;font-size:250%;">Address:</p><input type="textarea" name="address" style="width:30%;
+  height:40px;
+  padding:5px;
+  margin-bottom:25px;
+  margin-top:5px;
+  border:2px solid #ccc;
+  color:#4f4f4f;
+  font-size:16px;
+  border-radius:5px
+  "><br><br>
+  <p id="a" onmouseover="changea()" onmouseout="returna();" style="color:white;font-size:250%;">Qualification:</p><select name="qualification" style="width:30%;height:10%;margin:10px 10px 0;background:linear-gradient(#ffdd7f 5%,#ffbc00 100%)
+  ">
+                       <option style="font-size:250%;">B.E.</option>
+                       <option style="font-size:250%;">MBA</option>
+                       <option style="font-size:250%;">B.Tech</option>
+                       <option style="font-size:250%;">BA</option>
+                        </select><br><br>
+  <pre style="color:white;font-size:250%;">Submit:<input type="submit" name="Submit" value="SUBMIT" style="padding:10px;font-size:16px;
+  background:linear-gradient(#ffbc00 5%,#ffdd7f 100%);
+  border:1px solid #e5a900;
+  color:#4E4D4B;
+  font-weight:700;
+  cursor:pointer;
+  width:20%;
+  border-radius:5px;
+  padding:10px 0;
+  outline:none;
+  "></pre>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <pre style="color:white;font-size:250%;">Reset:<input type="reset" name="Reset" value="RESET" style="padding:10px;font-size:16px;
+  background:linear-gradient(#ffbc00 5%,#ffdd7f 100%);
+  border:1px solid #e5a900;
+  color:#4E4D4B;
+  font-weight:700;
+  cursor:pointer;
+  width:20%;
+  border-radius:5px;
+
+  outline:none;
+  "></pre>
+  </form>
+</center>
+</body>
+</div>
+<div id="footer">
+  2016-Batch
+<br>&copyright 2016<br>All Right Reserved
+</div>
+</div>
+</body>
+ </html>
